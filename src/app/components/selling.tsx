@@ -75,21 +75,17 @@ const productsbox = ({ products }: { products: any }) => (
 );
 
 
-const Products = () => {
-    return (
-        <main>
-            <div className="w-full flex justify-center items-center mt-10 mb-1">
-                <div className="w-[80px]">
-                    <div className="flex">
-                        <h3 className="text-black-500 font-bold border-red-400 flex">Top Pics For You</h3>
-                        <div className="flex justify-between">
-                            <h1 className="text-slate-800 font-bold sm:text-md md:text-3xl ">Find a bright ideal to suit your taste with our great selection of suspension, floor and table lights.</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    )
+export default function ProductPage() {
+  return (
+    <div className="p-4">
+      <h1 className="text-4xl font-bold mb-4">Asgaard Sofa</h1>
+      <p className="text-xl text-gray-600">Rs. 250,000.00</p>
+      <p className="mt-2 text-gray-500">
+        This is a high-quality sofa perfect for your home. Stylish and comfortable!
+      </p>
+      <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">
+        Add To Cart
+      </button>
+    </div>
+  );
 }
-
-export default Products;
