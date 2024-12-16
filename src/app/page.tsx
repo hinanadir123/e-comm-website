@@ -21,20 +21,20 @@ import Product from "./components/selling";
 
 export default function Home() {
   return (
-     <div>
-      
+    <div>
+
       <Hero />
       <Card1 />
-       <Toppicks /> 
-       <Asguard />
-       <Blog/>
-       <Insta />
-       <Footer />
-       <Shop />
-       <Product />
-       
-          
+      <Toppicks />
+      <Asguard />
+      <Blog />
+      <Insta />
+      {/* <Footer /> */}
+      {/* <Shop />
+       <Product /> */}
 
-     </div>
+
+
+    </div>
   )
 }

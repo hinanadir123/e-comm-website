@@ -7,19 +7,19 @@ import pic1 from "images/pic1.jpg";
 
 export default function hero() {
   return (
-    <div className="flex flex-row justify-center items-center mt-2 bg-[#FAF4F4] gap-x-1">
-      <div className="flex flex-col justify-evenly items-center relative">
-         <img src="images/pic3.png" width={450} height={450} alt="table" />        
-      <h1 className="text-2xl font-semibold absolute bottom-2 mb-16 ">Side Table</h1>
-         <p className="underline">View More</p>
+    <div className="flex  justify-around items-center mt-2 bg-[#FAF4F4]">
+      <div className="flex flex-col justify-center items-center w-[50%]">
+        <img src="images/Mask group (1).png" width={500} height={500} alt="table" />
+        <h1 className="text-2xl font-semibold ">Side Table</h1>
+        <p className="underline">View More</p>
 
-     </div>
-     <div className="flex flex-col justify-evenly items-center relative">
-         <img src="images/pic2.png" width={450} height={450} alt="table" />        
-      <h1 className="text-2xl font-semibold absolute bottom-2 mb-16 ">Side Table</h1>
-         <p className="underline">View More</p>
+      </div>
+      <div className="flex flex-col justify-center  items-center w-[50%]">
+        <img src="images/pic2.png" width={700} height={700} alt="table" />
+        <h1 className="text-2xl font-semibold ">Side Table</h1>
+        <p className="underline">View More</p>
 
-     </div>
+      </div>
     </div>
   );
 }
