@@ -1,0 +1,10 @@
+.accountbackground{
+    background-image: url("images/bgg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 40%;
+    font-weight: 800;
+    font-size: large;
+    
+}
