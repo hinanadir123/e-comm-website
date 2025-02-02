@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: [
+      "cdn.sanity.io",
+      "plus.unsplash.com",
+      "next-ecommerce-template-4.vercel.app", // Added this domain
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

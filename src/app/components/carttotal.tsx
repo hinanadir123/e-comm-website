@@ -20,7 +20,7 @@ export default function Cart() {
                 <tr className="border-b">
                   <td className="px-4 py-4 flex items-center">
                     <img
-                      src="images/pc16.png"
+                      src="images/pic16.png"
                       alt="Asgaard sofa"
                       className="w-16 h-16 rounded bg-yellow-100 mr-4"
                     />

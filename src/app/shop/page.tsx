@@ -208,7 +208,7 @@ export default function Shop() {
           </div>
         </div>
       </div>
-      <div className="w-80 h-[320px] flex justify-around items-center bg-[#FAF4F4]">
+      <div className="w-full h-[320px] flex justify-around items-center bg-[#FAF4F4]">
         <div className="font-bold flex flex-col text-3xl">
           <h1>Free Delievry</h1>
           <p className="text-sm font-normal mt-3">

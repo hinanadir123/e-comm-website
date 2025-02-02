@@ -9,7 +9,7 @@ export default function hero() {
   return (
     <div className="flex  justify-around items-center mt-2 bg-[#FAF4F4]">
       <div className="flex flex-col justify-center items-center w-[50%]">
-        <img src="images/Mask group (1).png" width={500} height={500} alt="table" />
+        <img src="images/t5.png" width={500} height={500} alt="table" />
         <h1 className="text-2xl font-semibold ">Side Table</h1>
         <p className="underline">View More</p>
 

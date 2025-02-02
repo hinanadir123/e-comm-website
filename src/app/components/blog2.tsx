@@ -2,7 +2,7 @@ import React from "react";
 
 export default function blogg() {
   return (
-    <div className="w-full flex flex-col ">
+    <div className="w-full flex flex-wrap  justify-start items-start">
       <div className="w-[440px] h-[440px] shadow-sm flex flex-col justify-around items-center px-5 ">
         <img
           src="images/b1.jfif"
@@ -75,25 +75,25 @@ export default function blogg() {
             dolor possimus aspernatur.
           </p>
         </div>
-        <div className="flex flex-col">
-        <input type="text" className="px-4  outline rounded-md " />
-        <h1 className="font-bold text-2xl text-center">Catagoies</h1>
-
-        <div className="flex flex-col space-y-3">
-        <span className="text-slate-400">Crafts</span>
-        <span className="text-slate-400">Handmade</span>
-        <span className="text-slate-400">Design</span>
-        <span className="text-slate-400">Wood</span>
-        <span className="text-slate-400">Interior</span>
-      </div>
-      </div>
-
-      <div>
-        <h1>Recent Posts</h1>
         
+        <div className="flex flex-col mt-10 mb-10">
+          <input type="text" className="px-4  outline rounded-md " />
+          <h1 className="font-bold text-2xl text-center">Catagoies</h1>
+
+          <div className="flex flex-col mb-5 space-y-3">
+            <span className="text-slate-900">Crafts</span>
+            <span className="text-slate-900">Handmade</span>
+            <span className="text-slate-900">Design</span>
+            <span className="text-slate-900">Wood</span>
+            <span className="text-slate-900">Interior</span>
+          </div>
+        </div>
+
+        <div>
+          <h1>Recent Posts</h1>
+
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }

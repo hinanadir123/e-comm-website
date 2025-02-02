@@ -1,120 +1,71 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react';
+import { client } from '@/sanity/lib/client';
 
-export default function toppicks() {
+export default function Toppicks() {
+  const [data, setData] = useState([]);
+
+  const query = `*[_type == "product"]{
+    id,
+    name,
+    "imageUrl": imagePath,
+    price,
+    description,
+    discountPercentage,
+    isFeaturedProduct,
+    stockLevel,
+    category
+  }`;
+
+  const fetchProducts = async () => {
+    const res = await client.fetch(query);
+    console.log('res: ', res);
+    setData(res);
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   return (
-    <div>
- 
-<div className="w-full sm:h-[600px] lg:h-[400px] flex justify-center items-center bg-gray-50">
-  <div className="sm:w-full lg:w-[80%] flex sm:flex-col lg:flex-row sm:justify-center gap-y-3 sm:items-center lg:justify-evenly gap-x-4 px-4">
-    {/* Text Section */}
-    <div className="text-center lg:text-left ">
-      <h1 className="text-4xl font-semibold text-center mb-3">Top Picks For You</h1>
-      <h3 className="text-gray-600 text-center mt-1 mb-3">
-        Find a bright ideal to suit your taste with our great selection of suspension, floor, and table lights.
-      </h3>
-   
-
-    {/* Product Section */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 lg:mt-0">
-      {/* Product Card 1 */}
-      <div className="flex flex-col items-center border rounded-md shadow-md p-4 bg-white">
-        <img
-          src="images/pic2.png"
-          alt="Sofa"
-          className="w-40 h-40 object-cover mb-4"
-        />
-        <h3 className="text-lg font-semibold">Trenton Modular Sofa_3</h3>
-        <p className="text-gray-600 mt-2">Rs. 25,000.00</p>
-      </div>
-
-      {/* Product Card 2 */}
-      <div className="flex flex-col items-center border rounded-md shadow-md p-4 bg-white">
-        <img
-          src="images/pic3.png"
-          alt="Dining Set"
-          className="w-40 h-40 object-cover mb-4"
-        />
-        <h3 className="text-lg font-semibold">
-          Granite Dining Table with Dining Chair
+    <div className="w-full bg-gray-50 py-10">
+      {/* Text Section */}
+      <div className="text-center px-4 mb-8">
+        <h1 className="text-3xl md:text-4xl font-semibold mb-3">Top Picks For You</h1>
+        <h3 className="text-gray-600 text-sm md:text-base">
+          Find a bright idea to suit your taste with our great selection of products.
         </h3>
-        <p className="text-gray-600 mt-2">Rs. 25,000.00</p>
       </div>
 
-      {/* Product Card 3 */}
-      <div className="flex flex-col items-center border rounded-md shadow-md p-4 bg-white">
-        <img
-          src="images/pic4.png"
-          alt="Outdoor Bar"
-          className="w-40 h-40 object-cover mb-4"
-        />
-        <h3 className="text-lg font-semibold">Outdoor Bar Table and Stool</h3>
-        <p className="text-gray-600 mt-2">Rs. 25,000.00</p>
-      </div>
-
-      {/* Product Card 4 */}
-      <div className="flex flex-col items-center border rounded-md shadow-md p-4 bg-white">
-        <img
-          src="images/pic5.png"
-          alt="Teak Mirror"
-          className="w-40 h-40 object-cover mb-4"
-        />
-        <h3 className="text-lg font-semibold">Plain Console with Teak Mirror</h3>
-        <p className="text-gray-600 mt-2">Rs. 25,000.00</p>
+      {/* Product Section */}
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {data &&
+            data.slice(0, 4)?.map((product: any) => (
+              <div
+                key={product.id}
+                className="flex flex-col items-center border rounded-lg shadow-lg p-4 bg-white">
+                <img
+                  src={product.imageUrl ? product.imageUrl : ""}
+                  alt={product.name}
+                  className="w-32 h-32 sm:w-40 sm:h-40 object-cover mb-4 rounded-md"
+                />
+                <h3 className="text-base sm:text-lg font-semibold text-center">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 text-sm mt-1">Rs. {product.price}</p>
+                {product.discountPercentage > 0 && (
+                  <p className="text-green-500 text-sm mt-1">
+                    Discount: {product.discountPercentage}%
+                  </p>
+                )}
+                <p className="text-xs sm:text-sm text-gray-500 mt-2 text-center">
+                  {product.description}
+                </p>
+              </div>
+            ))}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-</div>
-</div>
-  )
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-
-// export default function toppicks() {
-//   return (
-//     <div className='w-full sm:h-[600px] lg:h-[400px] flex justify-center items-center'>
-//         <div className='sm:w-full lg:w-[80%] sm:justify-center gap-y-3 sm:items-center flex sm:flex-col lg:flex-row lg:justify-evenly gap-x-4'>
-//         <div className="text-center lg:text-left">
-//       <h1 className="text-4xl font-semibold mb-3">Top Picks For You</h1>
-//       <h3 className="text-gray-600">
-//         Find a bright ideal to suit your taste with our great selection of suspension, floor, and table lights.
-//       </h3>
-//     </div>
-            
-//             {/* box1 */}
-//             <div>
-//                 <img src="images/pic2.png" alt="sofa" />
-//             </div>
-//         </div>
-      
-//     </div>
-//   )
-// }

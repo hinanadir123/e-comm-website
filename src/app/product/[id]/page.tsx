@@ -16,7 +16,7 @@ export default function ProductPage() {
           <img src="/images/c2.png" alt="sofaa" />
           <img src="images/c3.png" alt="chair" />
           <img src="images/pic2.png" alt="outdoor" />
-          <img src="images/t4.png" alt="" />
+          <img src="images/t4.png" alt="image" />
         </div >
         <div className="bg-yellow-100 mt-4 mb-4 rounded-sm">
           <img src={"/images/pic7.png"}

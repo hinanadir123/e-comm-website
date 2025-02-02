@@ -5,7 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 
 export default function navbar() {
   return (
-    <header className="bg-yellow-100 h-12 shadow-sm border-b max-auto flex flex-col">
+    <header className= "bg-yellow-100 w-full h-12 shadow-sm border-b max-auto flex flex-col">
       {/* <div className="bg-black text-white py-2 text-sm flex justify-between items-center px-8 w-full"> */}
         {/* <div className="text-center flex-1">
           Summer Sale For All Swim Suits And Free Express Delievery -OFF 50%!

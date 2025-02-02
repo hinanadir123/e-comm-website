@@ -2,7 +2,8 @@ import React from 'react'
 
 export default function Asguard() {
   return (
-    <div className="flex items-center justify-around bg-yellow-100 rounded-lg p-6 px-10">
+    <div className="w-full flex items-center justify-around bg-yellow-100 rounded-lg p-6 px-10">
+      
       {/* image */}
       <div className="ml-5">
         <img src="images/pic7.png" alt="asguard soa"
@@ -26,7 +27,7 @@ export default function Asguard() {
           
       </Link> */}
       </div>
-
-    </div>
+      </div>
+  
   )
 }
