@@ -9,7 +9,6 @@ import Toppicks from "./components/toppicks";
 import Asguard from "./components/Asguard";
 import Insta from "./components/insta";
 import Blog from "./components/Blog";
-import Footer from "./components/Footer";
 import ProductCards from "./products/page";
 import Catagory from "./components/catagory";
 
@@ -32,7 +31,7 @@ export default function Home() {
       <Blog />
       <Insta />
       <ProductCards />
-      <Footer />
+      
          
       
 
